@@ -1,0 +1,18 @@
+import os
+def get_file_extension(filename):
+    """
+    Get the file extension of a filename.
+    Args:
+        filename (str): The filename to analyze.
+    Returns:
+        str: The file extension.
+    """
+    dot_index = filename.rfind(".")
+    if dot_index == -1:
+        return ""
+    else:
+        return filename[dot_index + 1:]
+if __name__ == "__main__":
+    filename = input("Input the Filename: ")
+    file_extension = get_file_extension(filename)
+    print(f"The extension of the file is : '{file_extension}'")
